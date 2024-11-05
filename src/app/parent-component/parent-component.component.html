@@ -1,0 +1,25 @@
+<app-child
+  [messageFromParent]="parentMessage"
+  [count]="initialCount"
+  (messageEvent)="receiveMessage($event)"
+  (countEvent)="updateCount($event)">
+</app-child>
+
+<p>Mensaje recibido desde el componente hijo: {{ messageFromChild }}</p>
+<p>Conteo actualizado desde el componente hijo: {{ updatedCount }}</p>
+
+<!--
+<app-child
+  [messageFromParent]="parentMessage"
+  [count]="initialCount"
+  (messageEvent)="receiveMessage($event)"
+  (countEvent)="updateCount($event)">
+</app-child>
+
+<p>Mensaje recibido desde el componente hijo: {{ messageFromChild }}</p>
+<p>Conteo actualizado desde el componente hijo: {{ updatedCount }}</p>
+
+<button (click)="callChildMethod()">Llamar al método del hijo desde el padre</button>
+
+
+-->
